@@ -16,4 +16,3 @@ extension User {
         case profileUrl = "profile_url"
     }
 }
-

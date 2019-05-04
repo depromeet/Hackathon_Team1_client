@@ -43,5 +43,23 @@ class SettingsProvider {
         }
     }
     
+    var userProfileUrl: String {
+        get {
+            return UserDefaults.standard[#function] ?? ""
+        }
+        set {
+            UserDefaults.standard[#function] = newValue
+        }
+    }
+    
+    var userNickname: String {
+        get {
+            return UserDefaults.standard[#function] ?? ""
+        }
+        set {
+            UserDefaults.standard[#function] = newValue
+        }
+    }
+    
 }
 

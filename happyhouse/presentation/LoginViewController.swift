@@ -73,13 +73,13 @@ class LoginViewController: UIViewController {
                         .debug()
                         .subscribe(onSuccess: { user in
                             SettingsProvider.shared.isUserLoggedIn = true
+                            SettingsProvider.shared.userProfileUrl = user.profileUrl
+                            SettingsProvider.shared.userNickname = user.nickname
                             
-                            let viewController = MainViewController()
+                            let viewController = HouseWorkListViewController()
                             self.navigationController?.pushViewController(viewController, animated: true)
                         }, onError: { error in
                             
-                            let viewController = MainViewController()
-                            self.navigationController?.pushViewController(viewController, animated: true)
                             print(error)
                         })
                 })
