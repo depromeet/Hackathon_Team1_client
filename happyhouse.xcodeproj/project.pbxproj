@@ -32,6 +32,13 @@
 		DA9E3A37227DF2D900876188 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E3A36227DF2D900876188 /* UITableViewCell.swift */; };
 		DA9E3A39227DF3B900876188 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E3A38227DF3B900876188 /* UIColor.swift */; };
 		DA9E3A3B227E0C0500876188 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E3A3A227E0C0500876188 /* CALayer.swift */; };
+		DA9E3A3D227E123B00876188 /* FamilyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E3A3C227E123B00876188 /* FamilyViewController.swift */; };
+		DA9E3A3F227E124D00876188 /* FamilyMemberViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E3A3E227E124D00876188 /* FamilyMemberViewCell.swift */; };
+		DA9E3A43227E2B7900876188 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E3A42227E2B7900876188 /* String.swift */; };
+		DA9E3A45227E2E8900876188 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E3A44227E2E8900876188 /* TabBarViewController.swift */; };
+		DA9E3A47227E338700876188 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E3A46227E338700876188 /* ShareViewController.swift */; };
+		DA9E3A49227E40FC00876188 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E3A48227E40FC00876188 /* OnBoardingViewController.swift */; };
+		DA9E3A4B227E474D00876188 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E3A4A227E474D00876188 /* Family.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +72,13 @@
 		DA9E3A36227DF2D900876188 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		DA9E3A38227DF3B900876188 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		DA9E3A3A227E0C0500876188 /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
+		DA9E3A3C227E123B00876188 /* FamilyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewController.swift; sourceTree = "<group>"; };
+		DA9E3A3E227E124D00876188 /* FamilyMemberViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberViewCell.swift; sourceTree = "<group>"; };
+		DA9E3A42227E2B7900876188 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		DA9E3A44227E2E8900876188 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		DA9E3A46227E338700876188 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		DA9E3A48227E40FC00876188 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		DA9E3A4A227E474D00876188 /* Family.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,10 +152,15 @@
 		DA9E3A08227DAC0C00876188 /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DA9E3A44227E2E8900876188 /* TabBarViewController.swift */,
 				DA9E3A09227DAC3E00876188 /* SplashViewController.swift */,
+				DA9E3A48227E40FC00876188 /* OnBoardingViewController.swift */,
 				DA9E3A0B227DAD0A00876188 /* LoginViewController.swift */,
 				DA9E3A18227DCD5800876188 /* HouseWorkListViewController.swift */,
 				DA9E3A2B227DDCF300876188 /* HouseWorkViewCell.swift */,
+				DA9E3A3C227E123B00876188 /* FamilyViewController.swift */,
+				DA9E3A3E227E124D00876188 /* FamilyMemberViewCell.swift */,
+				DA9E3A46227E338700876188 /* ShareViewController.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -181,6 +200,7 @@
 				DA9E3A22227DD37A00876188 /* Response.swift */,
 				DA9E3A27227DD5F100876188 /* User.swift */,
 				DA9E3A29227DDC9F00876188 /* HouseWork.swift */,
+				DA9E3A4A227E474D00876188 /* Family.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -201,6 +221,7 @@
 				DA9E3A36227DF2D900876188 /* UITableViewCell.swift */,
 				DA9E3A38227DF3B900876188 /* UIColor.swift */,
 				DA9E3A3A227E0C0500876188 /* CALayer.swift */,
+				DA9E3A42227E2B7900876188 /* String.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -311,7 +332,9 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ScrollableDatepicker/ScrollableDatepicker.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -324,7 +347,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScrollableDatepicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,17 +367,24 @@
 				DA9E3A23227DD37A00876188 /* Response.swift in Sources */,
 				DA9E3A26227DD57300876188 /* BackendService.swift in Sources */,
 				DA9E3A0C227DAD0A00876188 /* LoginViewController.swift in Sources */,
+				DA9E3A3F227E124D00876188 /* FamilyMemberViewCell.swift in Sources */,
+				DA9E3A49227E40FC00876188 /* OnBoardingViewController.swift in Sources */,
 				DA9E3A3B227E0C0500876188 /* CALayer.swift in Sources */,
 				DA9E3A1E227DCE3800876188 /* SettingsProvider.swift in Sources */,
+				DA9E3A47227E338700876188 /* ShareViewController.swift in Sources */,
 				DA9E3A2C227DDCF300876188 /* HouseWorkViewCell.swift in Sources */,
+				DA9E3A4B227E474D00876188 /* Family.swift in Sources */,
 				DA9E3A2E227DDDCA00876188 /* FontProvider.swift in Sources */,
 				DA9E3A2A227DDC9F00876188 /* HouseWork.swift in Sources */,
 				DA9E3A0A227DAC3E00876188 /* SplashViewController.swift in Sources */,
 				DA9E3A35227DF1C800876188 /* UIImageView.swift in Sources */,
 				DA9E3A20227DCF5000876188 /* Router.swift in Sources */,
+				DA9E3A43227E2B7900876188 /* String.swift in Sources */,
 				DA9E3A31227DDFB600876188 /* Array.swift in Sources */,
 				DA19E337227D921D00DCA3B7 /* ViewController.swift in Sources */,
+				DA9E3A45227E2E8900876188 /* TabBarViewController.swift in Sources */,
 				DA9E3A19227DCD5800876188 /* HouseWorkListViewController.swift in Sources */,
+				DA9E3A3D227E123B00876188 /* FamilyViewController.swift in Sources */,
 				DA9E3A39227DF3B900876188 /* UIColor.swift in Sources */,
 				DA9E3A33227DE06800876188 /* HappyError.swift in Sources */,
 				DA9E3A28227DD5F100876188 /* User.swift in Sources */,

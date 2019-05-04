@@ -11,11 +11,13 @@ public enum Router: URLRequestConvertible {
     
     // MARK: - API List
     case createUser(kakaoToken: String)
+    case createTask(name: String, assigneeId: Int)
+    case createFamily(myId: Int, friendId: Int) 
     
     // MARK: - API HTTP Methods
     var method: HTTPMethod {
         switch self {
-        case .createUser:
+        case .createUser, .createTask, .createFamily:
             return .post
         }
     }
@@ -25,6 +27,10 @@ public enum Router: URLRequestConvertible {
         switch self {
         case .createUser:
             return "/api/signin/"
+        case .createTask:
+            return "/api/task/"
+        case .createFamily(let myId, _):
+            return "/api/share/\(myId)/"
         }
     }
     
@@ -32,7 +38,11 @@ public enum Router: URLRequestConvertible {
     var parameters: [String: Any] {
         switch self {
         case .createUser(let kakaoToken):
-            return ["acccess_token": kakaoToken]
+            return ["access_token": kakaoToken]
+        case .createTask(let name, let assigneeId):
+            return ["housework_name": name, "assignee_id": assigneeId]
+        case .createFamily(_, let friendId):
+            return ["sharing_user_id": friendId]
         default:
             return [:]
         }

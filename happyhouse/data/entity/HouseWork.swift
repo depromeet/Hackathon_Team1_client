@@ -7,14 +7,16 @@
 
 import Foundation
 
-struct HouseWork {
+struct HouseWork: Codable {
     let name: String
+    let assigneeId: Int
     var isDone: Bool
 }
 
 extension HouseWork {
     enum CodingKeys : String, CodingKey {
-        case name
+        case name = "housework_name"
+        case assigneeId = "assignee_id"
         case isDone = "is_done"
     }
 }

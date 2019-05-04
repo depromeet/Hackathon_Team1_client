@@ -13,4 +13,6 @@ target 'happyhouse' do
   pod 'Kingfisher'
   pod 'Alamofire', '~> 5.0.0-beta.5'
   pod 'SnapKit', '~> 5.0.0'
+  pod 'ScrollableDatepicker', '~> 2.2'
+  pod 'Toaster'
 end

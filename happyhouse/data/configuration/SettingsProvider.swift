@@ -43,6 +43,15 @@ class SettingsProvider {
         }
     }
     
+    var userUid: Int {
+        get {
+            return UserDefaults.standard[#function] ?? 0
+        }
+        set {
+            UserDefaults.standard[#function] = newValue
+        }
+    }
+    
     var userProfileUrl: String {
         get {
             return UserDefaults.standard[#function] ?? ""

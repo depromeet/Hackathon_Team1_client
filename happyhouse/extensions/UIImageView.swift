@@ -16,6 +16,6 @@ extension UIImageView {
     
     func setImage(urlString: String, placeholder: UIImage? = nil) {
         let url = URL(string: urlString)
-        self.kf.setImage(with: url)
+        self.kf.setImage(with: url, placeholder: placeholder)
     }
 }

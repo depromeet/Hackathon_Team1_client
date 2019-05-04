@@ -14,30 +14,51 @@ class LoginViewController: UIViewController {
     private var disposeBag = DisposeBag()
     
     // MARK: - UI elements
-    private lazy var label = UILabel()
+    private lazy var loginImageView = UIImageView()
+    private lazy var loginButtonImageView = UIImageView()
     private lazy var loginButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
-        view.addSubview(label)
+        view.backgroundColor = UIColor(red: 255, green: 219, blue: 99)
+        
+        view.addSubview(loginImageView)
         view.addSubview(loginButton)
+        view.addSubview(loginButtonImageView)
         
-        label.text = "Perform login here.."
-        loginButton.setTitle("Kakaotalk login", for: .normal)
-        loginButton.setTitleColor(.black, for: .normal)
-        loginButton.backgroundColor = .yellow
+        loginImageView.image = UIImage(named: "imgH")
         
-        label.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-        }
+        loginButtonImageView.image = UIImage(named: "btnDown")
         
-        loginButton.snp.makeConstraints { make in
-            make.height.equalTo(70)
+        loginButton.backgroundColor = UIColor(red: 255, green: 236, blue: 31)
+        
+        loginImageView.snp.makeConstraints { make in
             make.left.equalToSuperview()
             make.right.equalToSuperview()
             make.bottom.equalToSuperview()
+        }
+        
+        loginButtonImageView.snp.makeConstraints { make in
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+            make.top.equalTo(loginButton).offset(10)
+        }
+        
+        loginButton.snp.makeConstraints { make in
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+            
+            make.bottom.equalTo(view)
+            
+            if #available(iOS 11.0, *) {
+                let window = UIApplication.shared.keyWindow
+                let bottomPadding = window?.safeAreaInsets.bottom ?? 0
+                make.height.equalTo(60 + bottomPadding)
+            } else {
+                make.height.equalTo(60)
+            }
+
         }
         
         bindToSubViews()
@@ -73,10 +94,13 @@ class LoginViewController: UIViewController {
                         .debug()
                         .subscribe(onSuccess: { user in
                             SettingsProvider.shared.isUserLoggedIn = true
-                            SettingsProvider.shared.userProfileUrl = user.profileUrl
+                            SettingsProvider.shared.userUid = user.userUid
+                            if let profileUrl = user.profileUrl {
+                                SettingsProvider.shared.userProfileUrl = profileUrl
+                            }
                             SettingsProvider.shared.userNickname = user.nickname
                             
-                            let viewController = HouseWorkListViewController()
+                            let viewController = TabBarController()
                             self.navigationController?.pushViewController(viewController, animated: true)
                         }, onError: { error in
                             

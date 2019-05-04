@@ -7,19 +7,21 @@
 
 import Foundation
 import RxSwift
+import ScrollableDatepicker
 
 class HouseWorkListViewController: UIViewController {
     
     private var disposeBag = DisposeBag()
-    private var works: [HouseWork] = [HouseWork(name: "청소기 돌리기", isDone: false),
-                                      HouseWork(name: "냉장고 청소", isDone: true),
-                                      HouseWork(name: "거실 청소", isDone: false),
-                                      HouseWork(name: "밥하기", isDone:  false)]
+    private var works: [HouseWork] = [HouseWork(name: "청소기 돌리기", assigneeId: 1, isDone: false),
+                                      HouseWork(name: "냉장고 청소", assigneeId: 1, isDone: true),
+                                      HouseWork(name: "거실 청소", assigneeId: 1, isDone: false),
+                                      HouseWork(name: "밥하기", assigneeId: 1, isDone:  false)]
     
     // MARK: - UI elements
     private lazy var navigationBar = UINavigationBar(frame: CGRect.zero)
     private lazy var profileImageView = UIImageView()
     private lazy var nameLabel = UILabel()
+    private lazy var datepicker = ScrollableDatepicker()
     private lazy var tableView = UITableView()
     private lazy var floatingButton = UIButton()
     
@@ -31,6 +33,7 @@ class HouseWorkListViewController: UIViewController {
         view.addSubview(navigationBar)
         view.addSubview(profileImageView)
         view.addSubview(nameLabel)
+        view.addSubview(datepicker)
         view.addSubview(tableView)
         view.addSubview(floatingButton)
         
@@ -46,11 +49,35 @@ class HouseWorkListViewController: UIViewController {
         navigationBar.isTranslucent = false
         navigationBar.delegate = self
         
-        profileImageView.setImage(urlString: SettingsProvider.shared.userProfileUrl)
+        profileImageView.setImage(urlString: SettingsProvider.shared.userProfileUrl, placeholder: UIImage(named: "invalidName"))
         profileImageView.layer.roundCorners(radius: 35)
         
         nameLabel.text = SettingsProvider.shared.userNickname
         nameLabel.font = FontProvider.font(size: 16, weight: .semibold)
+        
+        var dates = [Date]()
+        for day in -15...15 {
+            dates.append(Date(timeIntervalSinceNow: Double(day * 86400)))
+        }
+        
+        datepicker.dates = dates
+        datepicker.selectedDate = Date()
+        datepicker.delegate = self
+        
+        var configuration = Configuration()
+    
+        // selected date customization
+        configuration.defaultDayStyle.dateTextColor = UIColor(red: 0, green: 0, blue: 0, opacity: 0.3)
+        
+        configuration.weekendDayStyle.weekDayTextFont = .systemFont(ofSize: 8, weight: UIFont.Weight.thin)
+        configuration.weekendDayStyle.dateTextFont = .systemFont(ofSize: 20, weight: UIFont.Weight.thin)
+        configuration.selectedDayStyle.backgroundColor = UIColor(white: 0.9, alpha: 1)
+        configuration.selectedDayStyle.dateTextColor = UIColor(red: 0, green: 0, blue: 0)
+        configuration.selectedDayStyle.selectorColor = UIColor(red: 255, green: 219, blue: 99)
+        configuration.selectedDayStyle.backgroundColor = .clear
+        configuration.daySizeCalculation = .numberOfVisibleItems(3)
+        
+        datepicker.configuration = configuration
         
         tableView.register(HouseWorkViewCell.self, forCellReuseIdentifier: HouseWorkViewCell.identifier)
         tableView.separatorStyle = .none
@@ -85,6 +112,14 @@ class HouseWorkListViewController: UIViewController {
             make.top.equalTo(profileImageView.snp.centerY)
         }
         
+        datepicker.snp.makeConstraints { make in
+            make.width.equalTo(180)
+            make.height.equalTo(65)
+            
+            make.top.equalTo(navigationBar.snp.bottom).offset(32)
+            make.right.equalToSuperview().inset(22)
+        }
+        
         tableView.snp.makeConstraints { make in
             make.top.equalTo(profileImageView.snp.bottom).offset(32)
             make.left.equalToSuperview()
@@ -116,8 +151,14 @@ class HouseWorkListViewController: UIViewController {
                         let name = textField.text else { return }
                     
                     // Add housework here
-                    self.works.append(HouseWork(name: name, isDone: false))
-                    self.tableView.reloadData()
+                    BackendService.createTask(taskName: name, assigneeId: SettingsProvider.shared.userUid)
+                    .observeOn(MainScheduler.instance)
+                        .subscribe(onSuccess: { work in
+                            self.works.append(work)
+                            self.tableView.reloadData()
+                        }, onError: { error in
+                            print(error)
+                        })
                 }
                 alertController.addAction(confirmAction)
                 let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
@@ -127,7 +168,8 @@ class HouseWorkListViewController: UIViewController {
     }
     
     @objc func addFriend() {
-        
+        let viewController = FamilyViewController()
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
@@ -173,4 +215,12 @@ extension HouseWorkListViewController: UINavigationBarDelegate {
     public func position(for bar: UIBarPositioning) -> UIBarPosition {
         return .topAttached
     }
+}
+
+extension HouseWorkListViewController: ScrollableDatepickerDelegate {
+    
+    func datepicker(_ datepicker: ScrollableDatepicker, didSelectDate date: Date) {
+        // showSelectedDate()
+    }
+    
 }
