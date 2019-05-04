@@ -50,12 +50,18 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
   - RxSwift (5.0.0)
   - SnapKit (5.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-beta.5)
   - Firebase/Core
+  - RxCocoa
   - RxSwift
   - SnapKit (~> 5.0.0)
 
@@ -69,6 +75,8 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUtilities
     - nanopb
+    - RxCocoa
+    - RxRelay
     - RxSwift
     - SnapKit
 
@@ -81,9 +89,11 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: ffe513e90551844a739e7bcbb1d2aca1c28a4338
   GoogleUtilities: 04fce34bcd5620c1ee76fb79172105c74a4df335
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
 
-PODFILE CHECKSUM: f842b391fb558b87ad1ea0981dfc6c90666a9e66
+PODFILE CHECKSUM: 5674625ce00a12ec56262484f17be6ae5db390b6
 
 COCOAPODS: 1.5.3
