@@ -66,6 +66,22 @@ class LoginViewController: UIViewController {
                     }
                     print("Kakaotalk login complete")
                     print("Access token 🔑 : \(session.accessToken)")
+                    
+                    guard let token = session.accessToken else { return }
+                    BackendService.signIn(kakaoToken: token)
+                        .observeOn(MainScheduler.instance)
+                        .debug()
+                        .subscribe(onSuccess: { user in
+                            SettingsProvider.shared.isUserLoggedIn = true
+                            
+                            let viewController = MainViewController()
+                            self.navigationController?.pushViewController(viewController, animated: true)
+                        }, onError: { error in
+                            
+                            let viewController = MainViewController()
+                            self.navigationController?.pushViewController(viewController, animated: true)
+                            print(error)
+                        })
                 })
         }.disposed(by: disposeBag)
     }

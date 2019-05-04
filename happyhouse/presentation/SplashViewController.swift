@@ -30,8 +30,14 @@ class SplashViewController: UIViewController {
         super.viewDidAppear(animated)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            let viewController = LoginViewController()
-            self.navigationController?.pushViewController(viewController, animated: false)
+            
+            if SettingsProvider.shared.isUserLoggedIn {
+                let viewController = MainViewController()
+                self.navigationController?.pushViewController(viewController, animated: false)
+            } else {
+                let viewController = LoginViewController()
+                self.navigationController?.pushViewController(viewController, animated: false)
+            }
         }
     }
 }
