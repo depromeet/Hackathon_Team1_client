@@ -10,9 +10,9 @@
 		9A6C1E6D277A14105CE447BD /* Pods_happyhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85BE71204976F7780266B42 /* Pods_happyhouse.framework */; };
 		DA19E335227D921D00DCA3B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19E334227D921D00DCA3B7 /* AppDelegate.swift */; };
 		DA19E337227D921D00DCA3B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19E336227D921D00DCA3B7 /* ViewController.swift */; };
-		DA19E33A227D921D00DCA3B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA19E338227D921D00DCA3B7 /* Main.storyboard */; };
 		DA19E33C227D921F00DCA3B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA19E33B227D921F00DCA3B7 /* Assets.xcassets */; };
 		DA19E33F227D921F00DCA3B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA19E33D227D921F00DCA3B7 /* LaunchScreen.storyboard */; };
+		DA19E347227D9C9F00DCA3B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA19E346227D9C9F00DCA3B7 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +22,10 @@
 		DA19E331227D921D00DCA3B7 /* happyhouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = happyhouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA19E334227D921D00DCA3B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA19E336227D921D00DCA3B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DA19E339227D921D00DCA3B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA19E33B227D921F00DCA3B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA19E33E227D921F00DCA3B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA19E340227D921F00DCA3B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA19E346227D9C9F00DCA3B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +80,10 @@
 			children = (
 				DA19E334227D921D00DCA3B7 /* AppDelegate.swift */,
 				DA19E336227D921D00DCA3B7 /* ViewController.swift */,
-				DA19E338227D921D00DCA3B7 /* Main.storyboard */,
 				DA19E33B227D921F00DCA3B7 /* Assets.xcassets */,
 				DA19E33D227D921F00DCA3B7 /* LaunchScreen.storyboard */,
 				DA19E340227D921F00DCA3B7 /* Info.plist */,
+				DA19E346227D9C9F00DCA3B7 /* GoogleService-Info.plist */,
 			);
 			path = happyhouse;
 			sourceTree = "<group>";
@@ -150,7 +150,7 @@
 			files = (
 				DA19E33F227D921F00DCA3B7 /* LaunchScreen.storyboard in Resources */,
 				DA19E33C227D921F00DCA3B7 /* Assets.xcassets in Resources */,
-				DA19E33A227D921D00DCA3B7 /* Main.storyboard in Resources */,
+				DA19E347227D9C9F00DCA3B7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,14 +189,20 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-happyhouse/Pods-happyhouse-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -218,14 +224,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DA19E338227D921D00DCA3B7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DA19E339227D921D00DCA3B7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DA19E33D227D921F00DCA3B7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
