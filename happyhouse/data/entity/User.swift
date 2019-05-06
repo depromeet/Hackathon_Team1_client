@@ -9,6 +9,7 @@ struct User: Codable {
     let userUid: Int
     let nickname: String
     let profileUrl: String?
+    var houseWorks: [HouseWork]? = []
 }
 
 extension User {

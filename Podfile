@@ -8,6 +8,7 @@ target 'happyhouse' do
   # Pods for happyhouse
 
   pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Kingfisher'

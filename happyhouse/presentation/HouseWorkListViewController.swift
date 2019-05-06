@@ -39,11 +39,11 @@ class HouseWorkListViewController: UIViewController {
         
         
         let navigationItem = UINavigationItem(title: "Personal list")
-        let closeImage = UIImage(named: "combinedShape")
-        let addFriendButtonItem = UIBarButtonItem(image: closeImage, style: .plain, target: self, action: #selector(addFriend))
-        addFriendButtonItem.tintColor = UIColor(red: 56, green: 56, blue: 56)
+//        let closeImage = UIImage(named: "combinedShape")
+//        let addFriendButtonItem = UIBarButtonItem(image: closeImage, style: .plain, target: self, action: #selector(addFriend))
+//        addFriendButtonItem.tintColor = UIColor(red: 56, green: 56, blue: 56)
         
-        navigationItem.rightBarButtonItem = addFriendButtonItem
+//        navigationItem.rightBarButtonItem = addFriendButtonItem
         navigationBar.setItems([navigationItem], animated: false)
         navigationBar.barTintColor = UIColor(red: 255, green: 219, blue: 99)
         navigationBar.isTranslucent = false

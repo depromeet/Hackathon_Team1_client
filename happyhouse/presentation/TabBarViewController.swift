@@ -36,7 +36,7 @@ class TabBarController: UITabBarController {
                                                                selectedImage: exploreOnImage)
         familyViewController.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
         
-        let statisticsViewControllre = UIViewController()
+        let statisticsViewControllre = StatisticsViewController()
         
         let categoryOnImage = UIImage(named: "monthlyGraph_on")
         let categoryOffImage = UIImage(named: "monthlyGraph_off")

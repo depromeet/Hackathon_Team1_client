@@ -39,6 +39,8 @@
 		DA9E3A47227E338700876188 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E3A46227E338700876188 /* ShareViewController.swift */; };
 		DA9E3A49227E40FC00876188 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E3A48227E40FC00876188 /* OnBoardingViewController.swift */; };
 		DA9E3A4B227E474D00876188 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E3A4A227E474D00876188 /* Family.swift */; };
+		DA9E3A4D227E4E4200876188 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E3A4C227E4E4200876188 /* StatisticsViewController.swift */; };
+		DA9E3A4F227E51B600876188 /* FamilyMemberHouseWorkViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E3A4E227E51B600876188 /* FamilyMemberHouseWorkViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +81,8 @@
 		DA9E3A46227E338700876188 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		DA9E3A48227E40FC00876188 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		DA9E3A4A227E474D00876188 /* Family.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family.swift; sourceTree = "<group>"; };
+		DA9E3A4C227E4E4200876188 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		DA9E3A4E227E51B600876188 /* FamilyMemberHouseWorkViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberHouseWorkViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 				DA9E3A2B227DDCF300876188 /* HouseWorkViewCell.swift */,
 				DA9E3A3C227E123B00876188 /* FamilyViewController.swift */,
 				DA9E3A3E227E124D00876188 /* FamilyMemberViewCell.swift */,
+				DA9E3A4E227E51B600876188 /* FamilyMemberHouseWorkViewCell.swift */,
+				DA9E3A4C227E4E4200876188 /* StatisticsViewController.swift */,
 				DA9E3A46227E338700876188 /* ShareViewController.swift */,
 			);
 			path = presentation;
@@ -329,6 +335,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -344,6 +351,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -366,6 +374,7 @@
 			files = (
 				DA9E3A23227DD37A00876188 /* Response.swift in Sources */,
 				DA9E3A26227DD57300876188 /* BackendService.swift in Sources */,
+				DA9E3A4F227E51B600876188 /* FamilyMemberHouseWorkViewCell.swift in Sources */,
 				DA9E3A0C227DAD0A00876188 /* LoginViewController.swift in Sources */,
 				DA9E3A3F227E124D00876188 /* FamilyMemberViewCell.swift in Sources */,
 				DA9E3A49227E40FC00876188 /* OnBoardingViewController.swift in Sources */,
@@ -379,6 +388,7 @@
 				DA9E3A0A227DAC3E00876188 /* SplashViewController.swift in Sources */,
 				DA9E3A35227DF1C800876188 /* UIImageView.swift in Sources */,
 				DA9E3A20227DCF5000876188 /* Router.swift in Sources */,
+				DA9E3A4D227E4E4200876188 /* StatisticsViewController.swift in Sources */,
 				DA9E3A43227E2B7900876188 /* String.swift in Sources */,
 				DA9E3A31227DDFB600876188 /* Array.swift in Sources */,
 				DA19E337227D921D00DCA3B7 /* ViewController.swift in Sources */,
