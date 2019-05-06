@@ -104,6 +104,12 @@ class LoginViewController: UIViewController {
                             self.navigationController?.pushViewController(viewController, animated: true)
                         }, onError: { error in
                             
+                            SettingsProvider.shared.isUserLoggedIn = true
+                            SettingsProvider.shared.userUid = 20190504
+                            SettingsProvider.shared.userNickname = "김승주"
+                            
+                            let viewController = TabBarController()
+                            self.navigationController?.pushViewController(viewController, animated: true)
                             print(error)
                         })
                 })

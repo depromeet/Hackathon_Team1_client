@@ -39,8 +39,10 @@ class StatisticsViewController: UIViewController {
         graphImageView.image = UIImage(named: "graphImage")
         
         overlayView.backgroundColor = UIColor(red: 255, green: 255, blue: 255, opacity: 0.7)
+        overlayView.isHidden = true
         
         constructionLabel.text = "아직 공사중이에요! 🔨"
+        constructionLabel.isHidden = true
         
         navigationBar.snp.makeConstraints { make in
             make.height.equalTo(44)

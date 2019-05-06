@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9A6C1E6D277A14105CE447BD /* Pods_happyhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85BE71204976F7780266B42 /* Pods_happyhouse.framework */; };
+		DA147D362280451F00C0C9E5 /* OnBoardingGuideViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA147D352280451F00C0C9E5 /* OnBoardingGuideViewCell.swift */; };
+		DA147D38228045B300C0C9E5 /* OnBoardingGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA147D37228045B300C0C9E5 /* OnBoardingGuide.swift */; };
 		DA19E335227D921D00DCA3B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19E334227D921D00DCA3B7 /* AppDelegate.swift */; };
-		DA19E337227D921D00DCA3B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19E336227D921D00DCA3B7 /* ViewController.swift */; };
 		DA19E33C227D921F00DCA3B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA19E33B227D921F00DCA3B7 /* Assets.xcassets */; };
 		DA19E33F227D921F00DCA3B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA19E33D227D921F00DCA3B7 /* LaunchScreen.storyboard */; };
 		DA19E347227D9C9F00DCA3B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA19E346227D9C9F00DCA3B7 /* GoogleService-Info.plist */; };
@@ -47,9 +48,10 @@
 		0F0C1D697E11EF9D61AC6D94 /* Pods-happyhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happyhouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-happyhouse/Pods-happyhouse.debug.xcconfig"; sourceTree = "<group>"; };
 		94052B309591652B2912BA29 /* Pods-happyhouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-happyhouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-happyhouse/Pods-happyhouse.release.xcconfig"; sourceTree = "<group>"; };
 		B85BE71204976F7780266B42 /* Pods_happyhouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_happyhouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA147D352280451F00C0C9E5 /* OnBoardingGuideViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingGuideViewCell.swift; sourceTree = "<group>"; };
+		DA147D37228045B300C0C9E5 /* OnBoardingGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingGuide.swift; sourceTree = "<group>"; };
 		DA19E331227D921D00DCA3B7 /* happyhouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = happyhouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA19E334227D921D00DCA3B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA19E336227D921D00DCA3B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DA19E33B227D921F00DCA3B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA19E33E227D921F00DCA3B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA19E340227D921F00DCA3B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,7 +145,6 @@
 				DA9E3A12227DBAC100876188 /* data */,
 				DA9E3A08227DAC0C00876188 /* presentation */,
 				DA19E334227D921D00DCA3B7 /* AppDelegate.swift */,
-				DA19E336227D921D00DCA3B7 /* ViewController.swift */,
 				DA19E33B227D921F00DCA3B7 /* Assets.xcassets */,
 				DA19E33D227D921F00DCA3B7 /* LaunchScreen.storyboard */,
 				DA19E340227D921F00DCA3B7 /* Info.plist */,
@@ -159,6 +160,8 @@
 				DA9E3A44227E2E8900876188 /* TabBarViewController.swift */,
 				DA9E3A09227DAC3E00876188 /* SplashViewController.swift */,
 				DA9E3A48227E40FC00876188 /* OnBoardingViewController.swift */,
+				DA147D37228045B300C0C9E5 /* OnBoardingGuide.swift */,
+				DA147D352280451F00C0C9E5 /* OnBoardingGuideViewCell.swift */,
 				DA9E3A0B227DAD0A00876188 /* LoginViewController.swift */,
 				DA9E3A18227DCD5800876188 /* HouseWorkListViewController.swift */,
 				DA9E3A2B227DDCF300876188 /* HouseWorkViewCell.swift */,
@@ -375,6 +378,7 @@
 				DA9E3A23227DD37A00876188 /* Response.swift in Sources */,
 				DA9E3A26227DD57300876188 /* BackendService.swift in Sources */,
 				DA9E3A4F227E51B600876188 /* FamilyMemberHouseWorkViewCell.swift in Sources */,
+				DA147D38228045B300C0C9E5 /* OnBoardingGuide.swift in Sources */,
 				DA9E3A0C227DAD0A00876188 /* LoginViewController.swift in Sources */,
 				DA9E3A3F227E124D00876188 /* FamilyMemberViewCell.swift in Sources */,
 				DA9E3A49227E40FC00876188 /* OnBoardingViewController.swift in Sources */,
@@ -384,6 +388,7 @@
 				DA9E3A2C227DDCF300876188 /* HouseWorkViewCell.swift in Sources */,
 				DA9E3A4B227E474D00876188 /* Family.swift in Sources */,
 				DA9E3A2E227DDDCA00876188 /* FontProvider.swift in Sources */,
+				DA147D362280451F00C0C9E5 /* OnBoardingGuideViewCell.swift in Sources */,
 				DA9E3A2A227DDC9F00876188 /* HouseWork.swift in Sources */,
 				DA9E3A0A227DAC3E00876188 /* SplashViewController.swift in Sources */,
 				DA9E3A35227DF1C800876188 /* UIImageView.swift in Sources */,
@@ -391,7 +396,6 @@
 				DA9E3A4D227E4E4200876188 /* StatisticsViewController.swift in Sources */,
 				DA9E3A43227E2B7900876188 /* String.swift in Sources */,
 				DA9E3A31227DDFB600876188 /* Array.swift in Sources */,
-				DA19E337227D921D00DCA3B7 /* ViewController.swift in Sources */,
 				DA9E3A45227E2E8900876188 /* TabBarViewController.swift in Sources */,
 				DA9E3A19227DCD5800876188 /* HouseWorkListViewController.swift in Sources */,
 				DA9E3A3D227E123B00876188 /* FamilyViewController.swift in Sources */,

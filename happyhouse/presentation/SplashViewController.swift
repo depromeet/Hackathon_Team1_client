@@ -45,7 +45,7 @@ class SplashViewController: UIViewController {
                 self.navigationController?.pushViewController(viewController, animated: false)
             } else {
                 
-                let viewController = LoginViewController()
+                let viewController = OnBoardingViewController()
                 self.navigationController?.pushViewController(viewController, animated: false)
             }
         }
